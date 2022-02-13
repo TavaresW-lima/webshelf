@@ -1,0 +1,28 @@
+{
+  "name": "webshelf-backend",
+  "version": "1.0.0",
+  "description": "Back end livraria web shelf",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "./",
+    "dev": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify src/index.ts"
+  },
+  "keywords": [],
+  "author": "William Tavares http://github.com/tavaresW-lima",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.2",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.41"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/mysql": "^2.15.21",
+    "@types/node": "^17.0.17",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.5"
+  }
+}
