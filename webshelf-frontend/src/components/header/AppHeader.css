@@ -1,0 +1,31 @@
+@import url('../../assets/styles/variables.css');
+
+.main-wrapper {
+    height: 50px;
+    padding: 5px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--main-color);
+    background: white;
+    color: crimson;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+    text-decoration: none;
+    font-family: 'Roboto';
+    font-weight: 700;
+    color: crimson;
+}
+
+.logo-wrapper:hover {
+    color: crimson;
+}
+
+.logo-image {
+    height: 25px;
+    margin-right: 5px;
+}
