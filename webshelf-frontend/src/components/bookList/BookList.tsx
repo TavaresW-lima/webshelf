@@ -1,23 +1,27 @@
 import { useEffect, useState } from 'react';
 import { Book } from '../../model/Book';
-import { BookCard } from '../bookCard/BookCard';
+import { BookCard } from './bookCard/BookCard';
+import './BookList.css'
+import axios from 'axios';
+
+const BOOK_LIST_URL = 'http://127.0.0.1:8080/book';
 
 export const BookList = (props: any) => {
 
-    const bookUrl = 'http://127.0.0.1:8080/book';
     const [bookList, setbookList] = useState<Book[]>([]);
 
     useEffect(() => {
-        async function fetchData() {
-            let response = await fetch(bookUrl);
-            let books = await response.json();
-            setbookList(books);
-        }
-        fetchData();
-    }, [])
+        fetchBooks();
+    }, []);
+
+    async function fetchBooks() {
+        const response = await axios(BOOK_LIST_URL);
+        const books = await response.data;
+        setbookList(books);
+    };
 
     return (
-        <div className="container w-100 d-flex flex-column align-items-center">
+        <div className="book-list">
             {bookList.map(book => {
                 return (
                     <BookCard 

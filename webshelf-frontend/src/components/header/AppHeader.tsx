@@ -5,10 +5,10 @@ export const AppHeader = () => {
     return (
         <div className='main-wrapper'>
             <div className="d-flex align-items-center">
-                <a href="#" className="logo-wrapper">
+                <span className="logo-wrapper cursor-pointer">
                     <img className="logo-image" src={logo} alt="Logo Webshelf"  />
-                    <span>Webshelf</    span>
-                </a>
+                    <span>Webshelf</span>
+                </span>
                 <h5 className="ms-2"> - Your online reading platform</h5>
             </div>
         </div>
