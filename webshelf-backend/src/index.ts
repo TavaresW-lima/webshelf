@@ -4,6 +4,7 @@ import { createConnection } from 'typeorm';
 import { errorHandlerMiddleware } from './middleware/errorHandler.middleware';
 import bookRoutes from './routes/book.routes';
 import saleRoutes from './routes/sale.routes';
+import { ormconfig as DB_CONFIG} from './config/db.conf';
 
 
 const PORT = 8080;
@@ -18,7 +19,7 @@ app.use('/sale', saleRoutes);
 
 app.use(errorHandlerMiddleware);
 
-createConnection().then(() => {
+createConnection(DB_CONFIG).then(() => {
     app.listen(PORT, () => {
         console.log(`Listening on Port: ${PORT}`);
     });

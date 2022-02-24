@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  app:
+    image: node:16-alpine
+    command: sh -c "npm install && npm run dev"
+    depends_on:
+      - "db" 
+    ports:
+      - 8080:8080
+    working_dir: /app
+    volumes:
+      - ./:/app
+    environment:
+      MYSQL_HOST: db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: "220562"
+      MYSQL_DB: webshelf
+  
+  db:
+    image: mariadb
+    volumes:
+    - webshelf-volume:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "220562"
+      MYSQL_DATABASE: webshelf
+
+volumes:
+  webshelf-volume:
