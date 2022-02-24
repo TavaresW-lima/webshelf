@@ -1,6 +1,6 @@
 # webshelf
 ### NodeJs, Express e React
-Projeto integrando uma api feita em nodejs, express e typeorm a uma pequena aplicação em react.
+Um experimento que consiste em uma api feita em nodejs, express e typeorm a uma pequena aplicação em react.
 
 ### Como rodar:
 
