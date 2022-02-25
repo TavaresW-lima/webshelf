@@ -5,13 +5,13 @@ import axios from 'axios';
 import { API_BASE_URL } from '../../config/api.conf';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleNotch, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faCircleNotch } from '@fortawesome/free-solid-svg-icons';
 
 const BOOK_LIST_URL = `${API_BASE_URL}/book`;
 
 library.add(faCircleNotch)
 
-export const BookList = (props: any) => {
+export const BookList = () => {
 
     const [bookList, setbookList] = useState<Book[] | null>(null);
 

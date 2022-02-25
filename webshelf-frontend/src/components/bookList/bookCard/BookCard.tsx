@@ -1,3 +1,6 @@
+import ButtonPrimary from '../../Button/ButtonPrimary';
+import ButtonTerciary from '../../Button/ButtonTerciary';
+
 export const BookCard = (props: any) => {
     return (
         <div className="flex flex-col overflow-hidden rounded border border-stale-500 bg-white transition
@@ -18,10 +21,8 @@ export const BookCard = (props: any) => {
                         <span>{props.isbn}</span>
                     </div>
                     <div className="flex items-center">
-                        <button className="py-2 px-4 text-rose-500 font-bold text-sm mx-1
-                                           hover:text-rose-800 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:ring-opacity-75">More</button>
-                        <button className="py-2 px-4 bg-rose-500 text-white font-semibold rounded-lg shadow-md text-sm mx-1
-                                           hover:bg-rose-800 focus:outline-none focus:ring-2 focus:ring-rose-400 focus:ring-opacity-75">Read</button>
+                        <ButtonTerciary>More</ButtonTerciary>
+                        <ButtonPrimary>Read</ButtonPrimary>
                     </div>
                 </div>
             </div>

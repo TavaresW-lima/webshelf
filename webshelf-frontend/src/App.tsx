@@ -1,5 +1,5 @@
-import { BookList } from './features/bookList/BookList';
-import { AppHeader } from './features/header/AppHeader';
+import { BookList } from './components/bookList/BookList';
+import { AppHeader } from './components/header/AppHeader';
 
 function App() {
   return (
